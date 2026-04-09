@@ -1,0 +1,23 @@
+{
+  "skill_name": "BSC-Amazon-sif-keyword-lark-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我这边有个 Sif 关键词调研 Excel，帮我输出飞书文档、飞书多维表格和分析仪表盘。你先让我选择或提供要分析的文件。",
+      "expected_output": "会先识别这是关键词调研表而非广告后台报表，生成投放优化分析，并按流程创建飞书文档、Base 和 dashboard；同时会询问是否还要生成可导入亚马逊后台的 CSV。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "参考 Sif 关键词模板，给我做一个运营可执行的投放监控版，飞书 Base 和 dashboard 都要，但先别急着生成 Amazon CSV，你先问我。",
+      "expected_output": "会创建运营监控版所需的 Base / dashboard 结构，并在执行 CSV 导出前主动询问用户是否要生成。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "把这个关键词调研结果整理成飞书文档和多维表格，顺便看看能不能直接出一份广告后台调整 CSV。",
+      "expected_output": "会按 skill 规则先补问或确认 Excel 输入，再明确询问是否生成可直接导入亚马逊广告后台的 CSV，并分别输出飞书交付物与可选 CSV。",
+      "files": []
+    }
+  ]
+}
