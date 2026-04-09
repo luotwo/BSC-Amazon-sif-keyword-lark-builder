@@ -24,19 +24,19 @@
 
 ## 安装
 
-### 1. 推荐安装包
+### 1. GitHub 仓库
 
-安装包文件：
+仓库地址：
 
-`D:\BSCSkills\BSC-Amazon-Skills-main\BSC-Amazon-Keyword-Research-Analysis\BSC-Amazon-sif-keyword-lark-builder.skill`
+`https://github.com/luotwo/BSC-Amazon-sif-keyword-lark-builder`
 
-如果你的 Claude Code 支持导入 `.skill`，优先导入这个文件。
+如果你需要下载源码或查看最新版本，优先从这个 GitHub 仓库进入。
 
 ### 2. 目录方式
 
-源目录：
+GitHub 目录：
 
-`D:\BSCSkills\BSC-Amazon-Skills-main\BSC-Amazon-Keyword-Research-Analysis\BSC-Amazon-sif-keyword-lark-builder`
+`https://github.com/luotwo/BSC-Amazon-sif-keyword-lark-builder/tree/main`
 
 适合支持“从目录加载 skill”的环境。
 
@@ -45,13 +45,14 @@
 如果你是第一次接触，按这个顺序操作最稳：
 
 1. 先确认你本机能正常打开 Claude Code / Claude CLI
-2. 准备好安装包：
-   - `D:\BSCSkills\BSC-Amazon-Skills-main\BSC-Amazon-Keyword-Research-Analysis\BSC-Amazon-sif-keyword-lark-builder.skill`
-3. 在你的 Claude Code 环境里导入这个 `.skill` 文件
-4. 导入完成后，重新开一个新会话测试触发
-5. 直接复制“快速开始”里的示例提问进行测试
+2. 打开仓库：
+   - `https://github.com/luotwo/BSC-Amazon-sif-keyword-lark-builder`
+3. 下载源码（Code → Download ZIP）或用 git clone 拉取仓库
+4. 在你的 Claude Code 环境里按目录导入这个 skill
+5. 导入完成后，重新开一个新会话测试触发
+6. 直接复制“快速开始”里的示例提问进行测试
 
-如果你的环境不支持导入 `.skill`，就改用上面的“目录方式”。
+如果你的环境后续支持 `.skill` 安装包，也可以再补充发布安装包。
 
 ---
 
@@ -203,17 +204,17 @@ Sif 关键词调研表不是广告后台报表。
 
 ## 文件位置
 
-当前目录：
+GitHub 根目录：
 
-`D:\BSCSkills\BSC-Amazon-Skills-main\BSC-Amazon-Keyword-Research-Analysis\BSC-Amazon-sif-keyword-lark-builder`
+`https://github.com/luotwo/BSC-Amazon-sif-keyword-lark-builder/tree/main`
 
 主要文件：
 
-- `D:\BSCSkills\BSC-Amazon-Skills-main\BSC-Amazon-Keyword-Research-Analysis\BSC-Amazon-sif-keyword-lark-builder\SKILL.md`
-- `D:\BSCSkills\BSC-Amazon-Skills-main\BSC-Amazon-Keyword-Research-Analysis\BSC-Amazon-sif-keyword-lark-builder\README.md`
-- `D:\BSCSkills\BSC-Amazon-Skills-main\BSC-Amazon-Keyword-Research-Analysis\BSC-Amazon-sif-keyword-lark-builder\references\sif-lark-workflow.md`
-- `D:\BSCSkills\BSC-Amazon-Skills-main\BSC-Amazon-Keyword-Research-Analysis\BSC-Amazon-sif-keyword-lark-builder\evals\evals.json`
-- `D:\BSCSkills\BSC-Amazon-Skills-main\BSC-Amazon-Keyword-Research-Analysis\BSC-Amazon-sif-keyword-lark-builder.skill`
+- `https://github.com/luotwo/BSC-Amazon-sif-keyword-lark-builder/blob/main/SKILL.md`
+- `https://github.com/luotwo/BSC-Amazon-sif-keyword-lark-builder/blob/main/README.md`
+- `https://github.com/luotwo/BSC-Amazon-sif-keyword-lark-builder/blob/main/references/sif-lark-workflow.md`
+- `https://github.com/luotwo/BSC-Amazon-sif-keyword-lark-builder/blob/main/evals/evals.json`
+- `https://github.com/luotwo/BSC-Amazon-sif-keyword-lark-builder`
 
 ---
 
