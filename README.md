@@ -266,6 +266,7 @@ GitHub 根目录：
 如果你有一份 **Sif 关键词调研 Excel**，或一份已经整理好的 **关键词研究结论 Markdown / wiki 页面**，想快速生成 **飞书文档 + 飞书 Base + 飞书仪表盘 + 可选 Amazon CSV**，直接把路径发给 Claude 即可。
 如果需要了解、共创、学习相关亚马逊运营 Skill，请添加我们公众号和相关联系方式，获取相关亚马逊运营 Skill 源文件。
 ![9f453825a605ac5a92149be126636dc4](https://github.com/user-attachments/assets/9680fd49-0f0f-4642-8601-462ca28f1c77)
-![微信图片_20260409165035_4249_87](https://github.com/user-attachments/assets/16305816-7646-416e-9c37-e132bd592fa7)
+<img width="1056" height="1441" alt="微信图片_20260408141327_4138_87" src="https://github.com/user-attachments/assets/1304ff7c-2657-4e80-a98d-4fd0381b47e4" />
+
 ---
 <img width="844" height="376" alt="image" src="https://github.com/user-attachments/assets/0c809a29-8dad-4fd0-b5ce-d439e250a60a" />
