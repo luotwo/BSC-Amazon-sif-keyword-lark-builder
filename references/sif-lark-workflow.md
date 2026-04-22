@@ -7,6 +7,11 @@
 - 可输出 Campaign / Ad Group / Keyword / Negative Keyword 结构建议
 - 不可直接给出真实 ACOS、ROAS、CTR、CPC、CVR 结论
 
+当用户提供的是知识库页面、Markdown 页面、调研结论文档，而不是 Excel 时：
+- 同样可以输出飞书文档、Base、Dashboard 与 Amazon CSV
+- 应按“研究结论转执行交付物”处理
+- 必须明确标注：这是调研结论口径，不是广告后台实绩口径
+
 ## 推荐内容骨架
 
 1. 分析结论
@@ -76,11 +81,13 @@
 ### 4. Dashboard 主题
 - 使用允许值，如 `default`、`SimpleBlue`
 - 不要使用 `light`
+- 常用交付搭配：分析版用 `default`，运营监控版用 `SimpleBlue`
 
 ### 5. Dashboard block data_config
 - `group_by` 必须是数组
 - `count_all` 与 `series` 互斥
 - 涉及 filter 时，遵循标准结构：
+- 实战上最稳的首批 block：机会词层级分布、Campaign 分布、否词分类分布、执行清单总数、执行清单匹配方式分布、高优先级否词总数
 
 ```json
 {
@@ -101,3 +108,4 @@
 - Dashboard ID / 名称
 - 是否生成 CSV
 - 若未生成真实广告指标，提醒原因
+- 若文档因 `user access token is invalid or expired` 失败但 `bot` 成功，也要说明身份差异与后续处理建议

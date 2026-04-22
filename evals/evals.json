@@ -18,6 +18,24 @@
       "prompt": "把这个关键词调研结果整理成飞书文档和多维表格，顺便看看能不能直接出一份广告后台调整 CSV。",
       "expected_output": "会按 skill 规则先补问或确认 Excel 输入，再明确询问是否生成可直接导入亚马逊广告后台的 CSV，并分别输出飞书交付物与可选 CSV。",
       "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "我给你的不是 Excel，是一个 wiki 里的关键词调研页面。请直接生成飞书 Base、仪表盘和 CSV。",
+      "expected_output": "会识别输入是知识库 / Markdown 研究结论而不是 Excel，仍然继续生成飞书文档、Base、Dashboard 和 CSV，并明确提醒这些内容属于调研结论口径，不是广告后台实绩口径。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "请基于现有项目里的 Bulk CSV 模板，帮我把关键词研究结果生成为可导入 Amazon 广告后台的 CSV。",
+      "expected_output": "会优先搜索并复用仓库里现有 Campaign / Ad Group / Keyword / Negative Keyword 模板，不会自创表头，并输出分文件 CSV 与 ALL 合并版。",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "帮我生成飞书文档、Base 和 Dashboard。如果文档创建失败，请你自己处理，不要中断。",
+      "expected_output": "会优先尝试 user 身份创建飞书交付物；若飞书文档因 user token 失效失败，但 bot 身份可用，会回退到 bot 创建文档，并在结果中说明身份差异与后续处理建议。",
+      "files": []
     }
   ]
 }

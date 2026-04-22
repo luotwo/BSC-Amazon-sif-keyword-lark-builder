@@ -1,12 +1,20 @@
 # BSC-Amazon-sif-keyword-lark-builder
 
-把 **Sif 关键词调研 Excel** 快速整理成可执行交付物：
+把 **Sif 关键词调研结果** 快速整理成可执行交付物：
 - 飞书文档
 - 飞书多维表格（Base）
 - 飞书仪表盘（Dashboard）
 - 可选：亚马逊广告后台可导入 CSV
 
-适合新手直接使用。
+适合新手直接使用，也适合把已沉淀好的关键词研究结论快速转成执行材料。
+
+## Features
+
+- 支持从 **Sif 关键词调研 Excel** 生成飞书交付物
+- 支持从 **知识库页面 / Markdown / 调研结论文档** 生成飞书交付物
+- 自动生成 `分析结论 / 重点机会词 / 建议广告结构 / 建议否词池 / 预算与优化规则 / 可执行投放清单`
+- 自动创建分析版和运营版 Dashboard
+- 可选生成 Amazon Bulk CSV，并优先复用仓库内已有模板结构
 
 ---
 
@@ -61,12 +69,24 @@ GitHub 目录：
 请先确认：
 
 - 已安装并可使用 Claude Code / Claude CLI
-- 本机可执行 `python`
 - 已安装 `lark-cli`
 - `lark-cli` 已完成飞书认证
-- 已准备好一份 Sif 关键词调研 Excel
+- 已准备好一份 Sif 关键词调研 Excel，或一份可直接读取的 Markdown / wiki 调研结论
 
-准备好你自己的 Sif 关键词调研 Excel 文件，后续使用时把实际文件路径发给 Claude 即可。
+准备好你的输入材料后，把实际文件路径发给 Claude 即可。
+
+## Input Types
+
+本 skill 不只接受 Excel。
+
+支持的输入包括：
+
+- `Sif 关键词调研 Excel`
+- `wiki/*.md` 知识库页面
+- 其他结构化 `Markdown` 调研结论
+- 已经整理好的关键词策略摘要
+
+如果输入不是广告后台报表，输出中的 `ACOS / ROAS / CTR / CPC / CVR` 只能是策略建议口径，不能当成广告实绩口径。
 
 ---
 
@@ -107,6 +127,16 @@ GitHub 目录：
 - 分析版 Dashboard 名称或 ID
 - 运营监控版 Dashboard 名称或 ID
 - 如果你确认生成 CSV，还会返回本地 CSV 文件路径
+
+推荐的 CSV 交付结构：
+
+- `Campaign.csv`
+- `Ad_Group.csv`
+- `Keyword.csv`
+- `Negative_Keyword.csv`
+- `ALL.csv`
+
+优先复用仓库内现成 Bulk 模板，不建议手写一套新的表头规范。
 
 ---
 
@@ -172,6 +202,10 @@ Sif 关键词调研表不是广告后台报表。
 - 当前账号是否有文档、Base、Dashboard 权限
 - 是否缺少飞书开放平台 scope
 
+额外经验：
+- Base 和 Dashboard 可能还能正常创建，但飞书文档在 `user` 身份下会因为 `user access token is invalid or expired` 失败
+- 遇到这种情况，可以先回退到 `bot` 身份创建文档，再向用户说明文档身份差异
+
 ### 3. 只想出飞书，不想出 CSV
 
 当 skill 询问时，直接回答：
@@ -218,12 +252,20 @@ GitHub 根目录：
 
 ---
 
+## 实战经验
+
+这次实操已验证：
+
+- 可以从知识库页面直接生成飞书 Base、Dashboard、文档和 CSV，不一定非要 Excel
+- Base 最稳的 6 张表是：`分析结论`、`重点机会词`、`建议广告结构`、`建议否词池`、`预算与优化规则`、`可执行投放清单`
+- Dashboard 首批最稳的 6 个 block 是：机会词层级分布、Campaign 分布、否词分类分布、执行清单总数、执行清单按匹配方式分布、高优先级否词总数
+- CSV 最稳交付方式是 4 个明细文件 + 1 个 `ALL.csv` 合并文件
+
 ## 一句话
 
-如果你有一份 **Sif 关键词调研 Excel**，想快速生成 **飞书文档 + 飞书 Base + 飞书仪表盘 + 可选 Amazon CSV**，直接把 Excel 路径发给 Claude 即可。
-如果需要了解，共创，学习相关亚马逊运营Skill，请添加我们公众号和相关联系方式，进行分享相关亚马逊相关运营Skill源文件
+如果你有一份 **Sif 关键词调研 Excel**，或一份已经整理好的 **关键词研究结论 Markdown / wiki 页面**，想快速生成 **飞书文档 + 飞书 Base + 飞书仪表盘 + 可选 Amazon CSV**，直接把路径发给 Claude 即可。
+如果需要了解、共创、学习相关亚马逊运营 Skill，请添加我们公众号和相关联系方式，获取相关亚马逊运营 Skill 源文件。
 ![9f453825a605ac5a92149be126636dc4](https://github.com/user-attachments/assets/9680fd49-0f0f-4642-8601-462ca28f1c77)
 ![微信图片_20260409165035_4249_87](https://github.com/user-attachments/assets/16305816-7646-416e-9c37-e132bd592fa7)
----<img width="844" height="376" alt="image" src="https://github.com/user-attachments/assets/0c809a29-8dad-4fd0-b5ce-d439e250a60a" />
-
-
+---
+<img width="844" height="376" alt="image" src="https://github.com/user-attachments/assets/0c809a29-8dad-4fd0-b5ce-d439e250a60a" />
